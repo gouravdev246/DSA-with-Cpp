@@ -12,19 +12,11 @@ class Solution {
 public:
     int getDecimalValue(ListNode* head) {
         ListNode* temp = head ;
-        vector<int> nums ;
-        while(temp != nullptr){
-            nums.push_back(temp->val);
-            temp = temp->next ;
-        }
-        
         int decimalVal = 0 ;
-        for(int num : nums){
-            decimalVal = (decimalVal << 1) | num ;
+          while (temp != nullptr) {
+            decimalVal = (decimalVal << 1) | temp->val;
+            temp = temp->next;
         }
-
-
-
         return decimalVal ;
 
     }
