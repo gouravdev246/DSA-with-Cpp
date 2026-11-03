@@ -5,12 +5,7 @@ public:
         int maxel = *max_element(nums.begin() , nums.end());
         int count = 0 ;
         for(int i = 0 ; i < nums.size() ; i++){
-            while(nums[i] != maxel){
-                nums[i] += 1 ;
-                count++;
-            }
-
-
+            count += maxel-nums[i];
         }
         return count ;
     }
