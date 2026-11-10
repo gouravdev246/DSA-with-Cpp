@@ -16,7 +16,12 @@ public:
             }
 
         }
-        return pq.empty() ? 0 : pq.top() ;
+        if (pq.size() == 0) {
+            return 0;
+        }
+
+        return pq.top();
+
         
     }
 };
